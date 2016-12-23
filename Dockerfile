@@ -22,4 +22,5 @@ WORKDIR /dradis-ce
 RUN ruby bin/setup &&  bundle install && \
     ruby bin/setup
 
+#Bind to all interfaces explicitly as the default is localhost only
 CMD ["bundle","exec","rails","server","-b","0.0.0.0"]
